@@ -1,6 +1,6 @@
 [info]
-name = xorg-full
-type = bundle
+name = xorg
+type = con
 version = bundle
 
 [dependencies]
