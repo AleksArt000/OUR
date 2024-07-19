@@ -1,7 +1,7 @@
 [info]
 name = xorg
 type = con
-version = bundle
+version = 7
 
 [dependencies]
 xorg-build-env
