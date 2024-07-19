@@ -1,0 +1,1 @@
+This is a collection of packages for the X display server
