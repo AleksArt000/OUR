@@ -8,3 +8,6 @@ xorg-build-env
 
 [description]
 This is bundle containing all of the xorg packages this bundle was created for your convinence
+
+[special]
+echo $XORG_CONFIG
