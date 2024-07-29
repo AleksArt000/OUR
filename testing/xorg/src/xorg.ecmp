@@ -5,9 +5,10 @@ version = 7
 
 [dependencies]
 xorg-build-env
+util-macros
+xorgproto
+libxau
+
 
 [description]
 This is bundle containing all of the xorg packages this bundle was created for your convinence
-
-[special]
-echo $XORG_CONFIG
