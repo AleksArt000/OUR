@@ -1,5 +1,5 @@
 [info]
-name = xorgapps
+name = xorg-apps
 type = src
 version = latest
 url = https://www.x.org/pub/individual/app/

@@ -3,6 +3,7 @@ name = libxcb
 type = src
 version = 1.16
 url = https://xorg.freedesktop.org/archive/individual/lib/
+environment = xorg-build-env
 
 [dependencies]
 libxau
