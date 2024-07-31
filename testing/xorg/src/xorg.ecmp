@@ -10,6 +10,8 @@ xorgproto
 libxau
 libxdmcp
 xcb-proto
+libxcb
+
 
 [description]
 This is bundle containing all of the xorg packages this bundle was created for your convinence

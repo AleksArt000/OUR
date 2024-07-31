@@ -1,0 +1,12 @@
+[info]
+name = xorg-libs
+type = src
+version = latest
+url = https://www.x.org/pub/individual/lib/
+
+[dependencies]
+
+[description]
+The Xorg libraries provide library routines that are used within all X Window applications.
+
+[install]
