@@ -8,7 +8,8 @@ xorg-build-env
 util-macros
 xorgproto
 libxau
-
+libxdmcp
+xcb-proto
 
 [description]
 This is bundle containing all of the xorg packages this bundle was created for your convinence

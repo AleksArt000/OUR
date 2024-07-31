@@ -9,7 +9,8 @@ libxau
 xcb-proto
 
 [description]
-The libxcb package provides an interface to the X Window System protocol, which replaces the current Xlib interface. Xlib can also use XCB as a transport layer, allowing software to make requests and receive responses with both. 
+The libxcb package provides an interface to the X Window System protocol, which replaces the current Xlib interface.
+Xlib can also use XCB as a transport layer, allowing software to make requests and receive responses with both. 
 
 [install]
 wget $URL

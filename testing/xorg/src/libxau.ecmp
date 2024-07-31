@@ -1,5 +1,5 @@
 [info]
-name = libxau
+name = libXau
 type = src
 version = 1.0.11
 url = https://www.x.org/pub/individual/lib/
