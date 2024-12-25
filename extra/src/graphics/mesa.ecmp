@@ -42,8 +42,8 @@ meson setup ..                      \
       --prefix=$XORG_PREFIX         \
       --buildtype=release           \
       -D platforms=x11,wayland      \
-      -D gallium-drivers=G3D        \
-      -D vulkan-drivers=VK          \
+      -D gallium-drivers=$G3D        \
+      -D vulkan-drivers=$VK          \
       -D valgrind=disabled          \
       -D libunwind=disabled         &&
 
