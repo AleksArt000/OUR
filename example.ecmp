@@ -74,22 +74,19 @@ tar -xzf $NAME-$VERSION.tar.gz
     # Usually just configuring and making the package is enough
     # If something needs to be ran as root, it should be in the [install] section
 
-    ./configure --prefix=/usr
-    make
+./configure --prefix=/usr
+make
 
 # this is basically a bash script to install the package
 
 [install] 
 
     # A package should be installed in the $SOVIET_BUILD_DIR directory
-    # And make provided with $MAKE_FLAGS
     # That is usually achived by having:
 
 make DESTDIR=$SOVIET_BUILD_DIR install
 
-    # Notice that there is no need to use sudo as
-    # packages are first installed to a temp dir
-    # and then moved to their location as root
+    # Notice that there is no need to use sudo
 
 # this is a bash script that is run after the installation
 
