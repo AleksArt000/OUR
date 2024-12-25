@@ -3,12 +3,12 @@ name = make-ca
 version = 1.14
 type = src
 url =  https://github.com/lfs-book/$NAME/archive/v$VERSION/$NAME-$VERSION.tar.gz
-sha256 = 6391698fe6db16eb190da1aba802bc90c09c8baa4c116d9c65647bea87f190db
+ 
 
 [description]
 Public Key Infrastructure (PKI) is a method to validate the authenticity of an otherwise unknown entity across untrusted networks. 
 
-[download]
+[prepare]
 curl -L $URL -o $NAME-$VERSION.tar.gz
 tar -xf $NAME-$VERSION.tar.gz
 

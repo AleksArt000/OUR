@@ -16,7 +16,7 @@ libinput is a library that handles input devices for display servers and other a
 [files]
 libinput-1.26.1.tar.gz https://gitlab.freedesktop.org/libinput/libinput/-/archive/1.26.1/libinput-1.26.1.tar.gz 84fdd16ba0bd3a9adf6c1ffe4292b7a644b0d70f57f81f8239fd499a801189fb
 
-[download]
+[prepare]
 tar -xzf libinput-1.26.1.tar.gz
 
 [install]
@@ -31,4 +31,4 @@ meson setup ..                  \
       -D libwacom=false         \
       -D udev-dir=/usr/lib/udev &&
 ninja
-DESTDIR=$BUILD_ROOT ninja install
+DESTDIR=$SOVIET_BUILD_DIR ninja install

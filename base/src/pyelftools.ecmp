@@ -4,12 +4,12 @@ version = 0.31
 type = src
 license = MIT
 url = https://github.com/eliben/pyelftools/archive/refs/tags/v$VERSION.tar.gz
-sha256 = 24815cbfff9c5f68f5268983f55d969540a087bfdaa73c93f1a88e2a771f80f1
+ 
 
 [description]
 The Python Portable Executable (PE) parsing module
 
-[download]
+[prepare]
 curl -L $URL --output $NAME-$VERSION.tar.gz
 tar -xf $NAME-$VERSION.tar.gz
 

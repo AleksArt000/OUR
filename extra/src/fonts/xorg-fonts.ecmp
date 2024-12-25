@@ -23,7 +23,7 @@ font-ibm-type1-1.0.4.tar.xz $URL/font-ibm-type1-1.0.4.tar.xz c4395e95ba46d40c4ad
 font-misc-ethiopic-1.0.5.tar.xz $URL/font-misc-ethiopic-1.0.5.tar.xz 4749a7e6e1a1eef6c91fcc9a04e8b1c0ed027d40c1599e5a6c93270d8469b612
 font-xfree86-type1-1.0.5.tar.xz $URL/font-xfree86-type1-1.0.5.tar.xz a93c2c788a5ea1c002af7c8662cf9d9821fb1df51b8d2b2c5e0026dfdfea4837
 
-[download]
+[prepare]
 cat > list << "EOF"
 font-util-1.4.1.tar.xz
 encodings-1.1.0.tar.xz
@@ -46,7 +46,7 @@ do
   pushd $packagedir
   ./configure $XORG_CONFIG
     make
-    make DESTDIR=$BUILD_ROOT install
+    make DESTDIR=$SOVIET_BUILD_DIR install
   popd
   rm -rf $packagedir
 done

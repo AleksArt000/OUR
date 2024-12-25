@@ -3,12 +3,12 @@ name = shadow
 type = src
 version = 4.14.5
 url = https://github.com/shadow-maint/$NAME/releases/download/$VERSION/$NAME-$VERSION.tar.xz
-sha256 = cba74bc7b05d89c015afe23131f9159ece38779d40a8af4cf162852e6e85ca23
+ 
 
 [description]
 The Shadow package contains programs for handling passwords in a secure way. 
 
-[download]
+[prepare]
 curl -L $URL --output $NAME-$VERSION.tar.xz
 tar -xf $NAME-$VERSION.tar.xz
 

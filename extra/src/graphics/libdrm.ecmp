@@ -16,7 +16,7 @@ Libdrm is a low-level library, typically used by graphics drivers such as the Me
 [files]
 libdrm-2.4.122.tar.xz https://dri.freedesktop.org/libdrm/libdrm-2.4.122.tar.xz d9f5079b777dffca9300ccc56b10a93588cdfbc9dde2fae111940dfb6292f251
 
-[download]
+[prepare]
 tar -xf libdrm-2.4.122.tar.xz
 
 [install]
@@ -29,4 +29,4 @@ meson setup --prefix=$XORG_PREFIX \
             -D valgrind=disabled  \
             ..                    &&
 ninja
-DESTDIR=$BUILD_ROOT ninja install
+DESTDIR=$SOVIET_BUILD_DIR ninja install

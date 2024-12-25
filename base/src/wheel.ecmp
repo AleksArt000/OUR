@@ -4,13 +4,13 @@ version = 0.42.0
 type = src
 license = MIT
 url =  https://pypi.org/packages/source/w/$NAME/$NAME-$VERSION.tar.gz
-sha256 = c45be39f7882c9d34243236f2d63cbd58039e360f85d0913425fbd7ceea617a8
+ 
 
 [description]
 
 Wheel is a Python library that is the reference implementation of the Python wheel packaging standard.
 
-[download]
+[prepare]
 curl -L $URL --output $NAME-$VERSION.tar.gz
 tar -xzf $NAME-$VERSION.tar.gz
 

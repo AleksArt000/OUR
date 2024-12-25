@@ -15,11 +15,11 @@ libevent is an event notification library
 [dependencies]
 cmake
 
-[download]
+[prepare]
 tar -xzf $NAME-$VERSION.tar.gz
 
 [install]
 mkdir build && cd build &&
 cmake .. -DCMAKE_INSTALL_PREFIX=/usr &&
 make &&
-make DESTDIR=$BUILD_ROOT install
+make DESTDIR=$SOVIET_BUILD_DIR install

@@ -4,12 +4,12 @@ version = 125
 type = src
 license = GPL-2
 url = https://github.com/polkit-org/$NAME/archive/$VERSION/$NAME-$VERSION.tar.gz
-sha256 = 6a631867c0b41e6c159c22f921c4a4e59bed7e650e3bd022299f9d51f97f1c56
+ 
 
 [description] 
 Polkit is a toolkit for defining and handling authorizations. It is used for allowing unprivileged processes to communicate with privileged processes.
 
-[download]
+[prepare]
 curl -L $URL --output $NAME-$VERSION.tar.gz
 tar -xf $NAME-$VERSION.tar.gz
 

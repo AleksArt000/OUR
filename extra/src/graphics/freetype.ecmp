@@ -10,7 +10,7 @@ The FreeType2 package contains a library which allows applications to properly r
 [files]
 freetype-2.13.2.tar.xz https://downloads.sourceforge.net/freetype/freetype-2.13.2.tar.xz 12991c4e55c506dd7f9b765933e62fd2be2e06d421505d7950a132e4f1bb484d
 
-[download]
+[prepare]
 tar -xf freetype-2.13.2.tar.xz
 
 [install]
@@ -21,4 +21,4 @@ sed -r "s:.*(#.*SUBPIXEL_RENDERING) .*:\1:" \
 
 ./configure --prefix=/usr --enable-freetype-config --disable-static &&
 make
-make DESTDIR=$BUILD_ROOT install
+make DESTDIR=$SOVIET_BUILD_DIR install

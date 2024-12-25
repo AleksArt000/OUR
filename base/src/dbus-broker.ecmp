@@ -4,12 +4,12 @@ version = 35
 type = src
 license = Apache v2.0
 url = https://github.com/bus1/$NAME/releases/download/v$VERSION/$NAME-$VERSION.tar.xz
-sha256 = d50daa31ff33f48693194596ea2aeb1a925183b59cdc82a550774e5c43982252
+ 
 
 [description] 
 The dbus-broker project is an implementation of a message bus as defined by the D-Bus specification. Its aim is to provide high performance and reliability, while keeping compatibility to the D-Bus reference implementation.
 
-[download]
+[prepare]
 curl -L $URL --output $NAME-$VERSION.tar.xz
 tar xf $NAME-$VERSION.tar.xz
 

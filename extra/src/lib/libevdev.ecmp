@@ -14,7 +14,7 @@ The libevdev package contains common functions for Xorg input drivers.
 [files]
 libevdev-1.13.2.tar.xz https://www.freedesktop.org/software/libevdev/libevdev-1.13.2.tar.xz 3eca86a6ce55b81d5bce910637fc451c8bbe373b1f9698f375c7f1ad0de3ac48
 
-[download]
+[prepare]
 tar -xf libevdev-1.13.2.tar.xz
 
 [install]
@@ -26,4 +26,4 @@ meson setup ..                  \
       --buildtype=release       \
       -D documentation=disabled &&
 ninja
-DESTDIR=$BUILD_ROOT ninja install
+DESTDIR=$SOVIET_BUILD_DIR ninja install

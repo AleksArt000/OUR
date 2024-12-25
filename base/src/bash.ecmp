@@ -3,12 +3,12 @@ name = bash
 version = 5.2.9
 type = src
 url = https://ftp.gnu.org/gnu/$NAME/$NAME-$VERSION.tar.gz
-sha256 = 68d978264253bc933d692f1de195e2e5b463a3984dfb4e5504b076865f16b6dd
+ 
 
 [description]
 The Bourne-Again SHell
 
-[download]
+[prepare]
 curl -L $URL --output $NAME-$VERSION.tar.gz
 tar -xzf $NAME-$VERSION.tar.gz
 

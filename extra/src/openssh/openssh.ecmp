@@ -22,10 +22,10 @@ libedit
 [optional]
 libfido2
 
-[exports]
+[config]
 PACKAGE_DIRECTORY=$SOVIET_REPOS_DIR/OUR/extra/src/openssh
 
-[download]
+[prepare]
 tar -xzf $NAME-$VERSION.tar.gz
 
 [install]

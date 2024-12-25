@@ -4,12 +4,12 @@ version = 14.2.0
 type = src
 license = GPLv3 with exceptions
 url = https://ftp.gnu.org/gnu/$NAME/$NAME-$VERSION/$NAME-$VERSION.tar.xz
-sha256 = a7b39bc69cbf9e25826c5a60ab26477001f7c08d85cec04bc0e29cabed6f3cc9
+ 
 
 [description] 
 The GCC package contains the GNU compiler collection, which includes the C and C++ compilers. 
 
-[download]
+[prepare]
 curl -L $URL --output $NAME-$VERSION.tar.xz
 tar xf $NAME-$VERSION.tar.xz
 

@@ -5,14 +5,14 @@ version = 1.9.9
 type = src
 license = BSD-3-Clause
 url = http://www.sudo.ws/dist/$NAME-$VERSION.tar.gz
-sha256 = 6d6ee863a3bc26c87661093a74ec63e10fd031ceba714642d21636dfe25e3e00
+ 
 
 # package description , it can be on multiple lines and we support markdown
 [description] 
 This package provides a command-line tool for running commands with superuser privileges.
 It is commonly used to allow users to execute commands as the root user or another user with elevated privileges.
 
-[download]
+[prepare]
 curl -L $URL --output $NAME-$VERSION.tar.gz
 tar -xzf $NAME-$VERSION.tar.gz
 

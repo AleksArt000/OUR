@@ -14,10 +14,10 @@ libxcb
 [files]
 xcb-util-errors-1.0.1.tar.xz https://xcb.freedesktop.org/dist/xcb-util-errors-1.0.1.tar.xz 5628c87b984259ad927bacd8a42958319c36bdf4b065887803c9d820fb80f357
 
-[download]
+[prepare]
 tar -xf $NAME-$VERSION.tar.xz
 
 [install]
 ./configure $XORG_CONFIG --prefix=/usr
 make
-make DESTDIR=$BUILD_ROOT install
+make DESTDIR=$SOVIET_BUILD_DIR install

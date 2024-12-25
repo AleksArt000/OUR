@@ -4,13 +4,13 @@ version = 1.21.4
 type = src
 license = GPL-3.0
 url = https://ftp.gnu.org/gnu/wget/wget-$VERSION.tar.gz
-sha256 = 81542f5cefb8faacc39bbbc6c82ded80e3e4a88505ae72ea51df27525bcde04c
+ 
 
 [description] 
 wget is package for retrieving files using HTTP, HTTPS, FTP and FTPS
 it is a non-interactive commandline tool
 
-[download]
+[prepare]
 curl -O $URL
 tar -xf "wget-$VERSION.tar.gz"
 

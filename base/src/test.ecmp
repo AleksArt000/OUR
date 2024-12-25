@@ -4,11 +4,11 @@ version = 1.0.0
 license = MIT
 url = x.com
 
-[download]
+[prepare]
 mkdir $NAME-$VERSION
 curl $URL > $NAME-$VERSION/download.txt
 
 [install]
 echo "INSTALLING $NAME-$VERSION" > install.txt
-cp -r * $BUILD_ROOT
+cp -r * $SOVIET_BUILD_DIR
 

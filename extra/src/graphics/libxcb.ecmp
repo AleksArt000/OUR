@@ -17,7 +17,7 @@ Xlib can also use XCB as a transport layer, allowing software to make requests a
 [files]
 libxcb-1.16.tar.xz https://xorg.freedesktop.org/archive/individual/lib/libxcb-1.16.tar.xz 4348566aa0fbf196db5e0a576321c65966189210cb51328ea2bb2be39c711d71
 
-[download]
+[prepare]
 tar -xf libxcb-1.16.tar.xz
 
 [install]
@@ -26,4 +26,4 @@ tar -xf libxcb-1.16.tar.xz
             --docdir='${datadir}'/doc/libxcb-1.15
 LC_ALL=en_US.UTF-8 make
 make
-make DESTDIR=$BUILD_ROOT install
+make DESTDIR=$SOVIET_BUILD_DIR install

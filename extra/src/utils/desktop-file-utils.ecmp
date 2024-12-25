@@ -15,7 +15,7 @@ application databases and help adhere to the Desktop Entry Specification.
 [files]
 desktop-file-utils-0.27.tar.xz https://www.freedesktop.org/software/desktop-file-utils/releases/desktop-file-utils-0.27.tar.xz a0817df39ce385b6621880407c56f1f298168c040c2032cedf88d5b76affe836
 
-[download]
+[prepare]
 tar -xf desktop-file-utils-0.27.tar.xz
 
 [install]
@@ -24,4 +24,4 @@ cd    build &&
 
 meson setup --prefix=/usr --buildtype=release .. &&
 ninja
-DESTDIR=$BUILD_ROOT ninja install
+DESTDIR=$SOVIET_BUILD_DIR ninja install

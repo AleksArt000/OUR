@@ -16,10 +16,10 @@ This is useful for allowing clients to interact with the X Display Manager.
 [files]
 libXdmcp-1.1.5.tar.xz https://www.x.org/pub/individual/lib/libXdmcp-1.1.5.tar.xz d8a5222828c3adab70adf69a5583f1d32eb5ece04304f7f8392b6a353aa2228c
 
-[download]
+[prepare]
 tar -xf libXdmcp-1.1.5.tar.xz
 
 [install]
-./configure --prefix=$XORG_PREFIX --docdir=$BUILD_ROOT/usr/share/doc/libXdmcp-1.1.5 &&
+./configure --prefix=$XORG_PREFIX --docdir=$SOVIET_BUILD_DIR/usr/share/doc/libXdmcp-1.1.5 &&
 make
-make DESTDIR=$BUILD_ROOT install
+make DESTDIR=$SOVIET_BUILD_DIR install

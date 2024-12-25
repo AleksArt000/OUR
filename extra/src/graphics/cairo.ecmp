@@ -22,7 +22,7 @@ All drawing operations can be transformed by any affine transformation (scale, r
 [files]
 cairo-1.18.0.tar.xz https://www.cairographics.org/releases/cairo-1.18.0.tar.xz 243a0736b978a33dee29f9cca7521733b78a65b5418206fef7bd1c3d4cf10b64
 
-[download]
+[prepare]
 tar -xf cairo-1.18.0.tar.xz
 
 [install]
@@ -31,4 +31,4 @@ cd    build &&
 
 meson setup --prefix=/usr --buildtype=release .. &&
 ninja
-DESTDIR=$BUILD_ROOT ninja install
+DESTDIR=$SOVIET_BUILD_DIR ninja install

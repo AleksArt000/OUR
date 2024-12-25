@@ -4,13 +4,13 @@ version = 2.72
 type = src
 license = GPL-3.0-or-later
 url = https://ftp.gnu.org/gnu/$NAME/$NAME-$VERSION.tar.gz
-sha256 = afb181a76e1ee72832f6581c0eddf8df032b83e2e0239ef79ebedc4467d92d6e
+ 
 
 # package description
 [description]
 Autoconf is an extensible package of M4 macros that produce shell scripts to automatically configure software source code packages.
 
-[download]
+[prepare]
 curl -L $URL --output $NAME-$VERSION.tar.gz
 tar -xf $NAME-$VERSION.tar.gz
 

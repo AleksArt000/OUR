@@ -20,7 +20,7 @@ portability wrappers and interfaces for runtime functionality such as an event l
 [files]
 gobject-introspection-1.80.1.tar.xz https://download.gnome.org/sources/gobject-introspection/1.80/gobject-introspection-1.80.1.tar.xz a1df7c424e15bda1ab639c00e9051b9adf5cea1a9e512f8a603b53cd199bc6d8
 
-[download]
+[prepare]
 tar -xf gobject-introspection-1.80.1.tar.xz
 
 [install]
@@ -31,4 +31,4 @@ meson setup ..             \
       --prefix=/usr        \
       --buildtype=release  &&
 ninja
-DESTDIR=$BUILD_ROOT ninja install 
+DESTDIR=$SOVIET_BUILD_DIR ninja install 

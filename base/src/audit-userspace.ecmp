@@ -3,12 +3,12 @@ name = audit-userspace
 version = 4.0.2
 type = src
 url = https://github.com/linux-audit/audit-userspace/archive/refs/tags/v$VERSION.tar.gz
-sha256 = e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+ 
 
 [description]
 The Linux Audit System is designed to make Linux complaint with the requirements from Common Crciteria, PCI-DSS, and other security standards by intercepting system calls and serializing audit log entries from privileged user space applications.
 
-[download]
+[prepare]
 curl -L $URL --output $NAME-$VERSION.tar.gz
 tar -xf $NAME-$VERSION.tar.gz
 

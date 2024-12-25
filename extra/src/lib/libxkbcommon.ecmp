@@ -15,7 +15,7 @@ libxkbcommon is a keymap compiler and support library which processes a reduced 
 [files]
 libxkbcommon-1.7.0.tar.xz https://xkbcommon.org/download/libxkbcommon-1.7.0.tar.xz 65782f0a10a4b455af9c6baab7040e2f537520caa2ec2092805cdfd36863b247
 
-[download]
+[prepare]
 tar -xf libxkbcommon-1.7.0.tar.xz
 
 [install]
@@ -27,4 +27,4 @@ meson setup ..             \
       --buildtype=release  \
       -D enable-docs=false &&
 ninja
-DESTDIR=$BUILD_ROOT ninja install
+DESTDIR=$SOVIET_BUILD_DIR ninja install

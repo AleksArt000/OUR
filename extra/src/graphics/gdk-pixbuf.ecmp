@@ -21,7 +21,7 @@ docutils
 [files]
 gdk-pixbuf-2.42.12.tar.xz https://gemmei.ftp.acc.umu.se/pub/GNOME/sources/gdk-pixbuf/2.42/gdk-pixbuf-2.42.12.tar.xz b9505b3445b9a7e48ced34760c3bcb73e966df3ac94c95a148cb669ab748e3c7
 
-[download]
+[prepare]
 tar -xf $NAME-$VERSION.tar.xz
 
 [install]
@@ -33,7 +33,7 @@ meson setup .. \
   -D others=enabled \
   --wrap-mode=nofallback &&
 ninja
-DESTDIR=$BUILD_ROOT ninja install
+DESTDIR=$SOVIET_BUILD_DIR ninja install
 
 [special]
 /usr/bin/gdk-pixbuf-query-loaders --update-cache

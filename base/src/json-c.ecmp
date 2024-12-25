@@ -3,12 +3,12 @@ name = json-c
 version = 0.18
 type = src
 url = https://s3.amazonaws.com/json-c_releases/releases/json-c-$VERSION.tar.gz
-sha256 = 876ab046479166b869afc6896d288183bbc0e5843f141200c677b3e8dfb11724
+ 
 
 [description]
 A JSON implementation in C
 
-[download]
+[prepare]
 curl -L $URL --output $NAME-$VERSION.tar.gz
 tar -xf $NAME-$VERSION.tar.gz
 

@@ -4,12 +4,12 @@ version = 1.07.1
 type = src
 license = GPL
 url = https://ftp.gnu.org/gnu/$NAME/$NAME-$VERSION.tar.gz
-sha256 = 62adfca89b0a1c0164c2cdca59ca210c1d44c3ffc46daf9931cf4942664cb02a
+ 
 
 [description]
 bc is a language that supports arbitrary precision numbers with interactive execution of statements. There are some similarities in the syntax to the C programming language.
 
-[download]
+[prepare]
 curl -L $URL --output $NAME-$VERSION.tar.gz
 tar -xzf $NAME-$VERSION.tar.gz
 

@@ -17,11 +17,11 @@ libevent
 ncurses
 bison
 
-[download]
+[prepare]
 tar -xzf $NAME-$VERSION.tar.gz
 
 [install]
 ./configure --prefix=/usr
 make 
-make DESTDIR=$BUILD_ROOT install
+make DESTDIR=$SOVIET_BUILD_DIR install
 

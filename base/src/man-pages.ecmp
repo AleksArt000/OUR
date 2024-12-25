@@ -3,12 +3,12 @@ name = man-pages
 version = 6.9.1
 type = src
 url = https://mirrors.edge.kernel.org/pub/linux/docs/$NAME/$NAME-$VERSION.tar.xz
-sha256 = e23cbac29f110ba571f0da8523e79d373691466ed7f2a31301721817d34530bd
+ 
 
 [description]
 Linux man pages
 
-[download]
+[prepare]
 curl -L $URL --output $NAME-$VERSION.tar.xz
 tar -xf $NAME-$VERSION.tar.xz
 

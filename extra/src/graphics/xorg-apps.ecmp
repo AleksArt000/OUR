@@ -51,7 +51,7 @@ xwd-1.0.9.tar.xz $URL/xwd-1.0.9.tar.xz dc121b84947eb4a3d1131bff1e9844cfa2124d95b
 xwininfo-1.1.6.tar.xz $URL/xwininfo-1.1.6.tar.xz 3518897c17448df9ba99ad6d9bb1ca0f17bc0ed7c0fd61281b34ceed29a9253f
 xwud-1.0.6.tar.xz $URL/xwud-1.0.6.tar.xz 64048cd15eba3cd9a3d2e3280650391259ebf6b529f2101d1a20f441038c1afe
 
-[download]
+[prepare]
 cat > list << "EOF"
 iceauth-1.0.10.tar.xz
 mkfontscale-1.2.3.tar.xz
@@ -102,7 +102,7 @@ do
 
   ./configure $XORG_CONFIG &&
     make &&
-    make DESTDIR=$BUILD_ROOT install &&
+    make DESTDIR=$SOVIET_BUILD_DIR install &&
   popd &&
   rm -rf $packagedir
 done

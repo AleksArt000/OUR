@@ -4,12 +4,12 @@ version = 8.9.1
 type = src
 license = MIT
 url = https://curl.se/download/$NAME-$VERSION.tar.gz
-sha256 = 291124a007ee5111997825940b3876b3048f7d31e73e9caa681b80fe48b2dcd5
+ 
 
 [description]
 Utility and a library used for transferring files
 
-[download]
+[prepare]
 curl -L $URL --output $NAME-$VERSION.tar.gz
 tar -xzf $NAME-$VERSION.tar.gz
 

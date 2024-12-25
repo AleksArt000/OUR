@@ -4,12 +4,12 @@ version = 3.12.7
 type = src
 license = PSF
 url = https://www.python.org/ftp/python/$VERSION/Python-$VERSION.tar.xz
-sha256 = 24887b92e2afd4a2ac602419ad4b596372f67ac9b077190f459aba390faf5550
+ 
 
 [description]
 The Python 3 package contains the Python development environment. It is useful for object-oriented programming, writing scripts, prototyping large programs, and developing entire applications. Python is an interpreted computer language. 
 
-[download]
+[prepare]
 curl -L $URL --output $NAME-$VERSION.tar.xz
 tar xf $NAME-$VERSION.tar.xz
 mv Python-$VERSION python-$VERSION

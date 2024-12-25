@@ -28,7 +28,7 @@ git
 [files]
 sway-1.9.tar.gz https://codeload.github.com/swaywm/sway/tar.gz/refs/tags/1.9 b6e4e8d74af744278201792bcc4447470fcb91e15bbda475c647d475bf8e7b0b
 
-[download]
+[prepare]
 tar -xf $NAME-$VERSION.tar.gz
 
 [install]
@@ -36,6 +36,6 @@ meson build \
   --prefix /usr \
   --buildtype=plain
 ninja -C build
-DESTDIR=$BUILD_ROOT ninja -C build install
+DESTDIR=$SOVIET_BUILD_DIR ninja -C build install
 
 [special]

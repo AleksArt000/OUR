@@ -13,7 +13,7 @@ The Glslang package contains an frontend and validator for OpenGL, OpenGL ES, an
 [files]
 glslang-14.3.0.tar.gz https://github.com/KhronosGroup/glslang/archive/14.3.0/glslang-14.3.0.tar.gz be6339048e20280938d9cb399fcdd06e04f8654d43e170e8cce5a56c9a754284
 
-[download]
+[prepare]
 tar -xzf glslang-14.3.0.tar.gz
 
 [install]
@@ -27,4 +27,4 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr     \
       -D GLSLANG_TESTS=ON              \
       -G Ninja .. &&
 ninja
-DESTDIR=$BUILD_ROOT ninja install
+DESTDIR=$SOVIET_BUILD_DIR ninja install

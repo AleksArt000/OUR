@@ -16,10 +16,10 @@ libfido2 provides library functionality and command-line tools to communicate wi
 cmake
 libcbor
 
-[download]
+[prepare]
 tar -xzf $NAME-$VERSION.tar.gz
 
 [install]
 cmake -DCMAKE_INSTALL_PREFIX=/usr -B build
 make -C build
-make DESTDIR=$BUILD_ROOT -C build install
+make DESTDIR=$SOVIET_BUILD_DIR -C build install

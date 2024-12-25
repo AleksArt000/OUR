@@ -4,12 +4,12 @@ version = 2.1.5
 type = src
 license = BSD-3
 url = https://pypi.org/packages/source/M/MarkupSafe/MarkupSafe-$VERSION.tar.gz
-sha256 = d283d37a890ba4c1ae73ffadf8046435c76e7bc2247bbb63c00bd1a709c6544b
+ 
 
 [description]
 MarkupSafe is a Python module that implements an XML/HTML/XHTML Markup safe string.
 
-[download]
+[prepare]
 curl -L $URL --output $NAME-$VERSION.tar.gz
 tar -xzf $NAME-$VERSION.tar.gz
 mv MarkupSafe-$VERSION $NAME-$VERSION

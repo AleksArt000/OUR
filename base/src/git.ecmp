@@ -3,13 +3,13 @@ name = git
 version = 2.46.1
 type = src
 url = https://mirrors.edge.kernel.org/pub/software/scm/$NAME/$NAME-$VERSION.tar.gz
-sha256 = 888cafb8bd6ab4cbbebc168040a8850eb088f81dc3ac2617195cfc0877f0f543
+ 
 
 
 [description]
 Version control system designed to handle everything from small to very large projects with speed and efficiency
 
-[download]
+[prepare]
 curl -L $URL --output $NAME-$VERSION.tar.gz
 tar -xzf $NAME-$VERSION.tar.gz
 

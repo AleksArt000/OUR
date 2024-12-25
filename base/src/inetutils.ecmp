@@ -4,12 +4,12 @@ version = 2.5
 type = src
 license = GPLv3
 url = https://ftp.gnu.org/gnu/$NAME/$NAME-$VERSION.tar.xz
-sha256 = 87697d60a31e10b5cb86a9f0651e1ec7bee98320d048c0739431aac3d5764fb6
+ 
 
 [description] 
 The Inetutils package contains programs for basic networking. 
 
-[download]
+[prepare]
 curl -L $URL --output $NAME-$VERSION.tar.xz
 tar xf $NAME-$VERSION.tar.xz
 

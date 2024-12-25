@@ -9,7 +9,7 @@ sda256 = 116ec29b689ea4f0ede7327ebbd794ce8977e5eaa97565393441d3404deecda3
 [description]
 The Python Portable Executable (PE) parsing module
 
-[download]
+[prepare]
 curl -L $URL --output $NAME-$VERSION.tar.gz
 tar -xf $NAME-$VERSION.tar.gz
 

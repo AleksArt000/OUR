@@ -11,7 +11,7 @@ $NAME-$VERSION.zip https://github.com/Soviet-Linux/$NAME/archive/$VERSION.zip cd
 [description]
 A command-line system information tool written in bash 3.2+
 
-[download]
+[prepare]
 unzip $NAME-$VERSION.zip
 
 [install]

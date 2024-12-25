@@ -18,7 +18,7 @@ portability wrappers and interfaces for runtime functionality such as an event l
 [files]
 glib-2.80.4.tar.xz https://download.gnome.org/sources/glib/2.80/glib-2.80.4.tar.xz 24e029c5dfc9b44e4573697adf33078a9827c48938555004b3b9096fa4ea034f
 
-[download]
+[prepare]
 tar -xf glib-2.80.4.tar.xz
 
 [install]
@@ -31,4 +31,4 @@ meson setup ..                  \
       -D introspection=enabled \
       -D man-pages=enabled      &&
 ninja
-DESTDIR=$BUILD_ROOT ninja install
+DESTDIR=$SOVIET_BUILD_DIR ninja install

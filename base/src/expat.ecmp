@@ -3,13 +3,13 @@ name = expat
 version = 2.6.2
 type = src
 url = https://master.dl.sourceforge.net/project/expat/expat/$VERSION/$NAME-$VERSION.tar.xz
-sha256 = ee14b4c5d8908b1bec37ad937607eab183d4d9806a08adee472c3c3121d27364
+ 
 
 [description] # package description , it can be on multiple lines and we support makdown
 A stream oriented C library for parsing XML
 
 
-[download]
+[prepare]
 curl -L $URL --output $NAME-$VERSION.tar.xz
 tar -xf $NAME-$VERSION.tar.xz
 

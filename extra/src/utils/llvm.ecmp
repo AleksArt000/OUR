@@ -16,7 +16,7 @@ clang-18.1.7.src.tar.xz https://github.com/llvm/llvm-project/releases/download/l
 llvm-cmake-18.src.tar.xz https://anduin.linuxfromscratch.org/BLFS/llvm/llvm-cmake-18.src.tar.xz 857fb826ee0e159cb1ad282790c6613e55048bd9ecb3248940689d48cbe9da96
 llvm-third-party-18.src.tar.xz https://anduin.linuxfromscratch.org/BLFS/llvm/llvm-third-party-18.src.tar.xz ceb38dabc7250a3cda53fd81978d0f1b7aeaa8a3a055d5a336892665609b0f11
 
-[download]
+[prepare]
 tar -xf llvm-18.1.7.src.tar.xz
 
 [install]
@@ -50,4 +50,4 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr           \
       -D CLANG_CONFIG_FILE_SYSTEM_DIR=/etc/clang \
       -W no-dev -G Ninja ..                  &&
 ninja
-DESTDIR=$BUILD_ROOT ninja install
+DESTDIR=$SOVIET_BUILD_DIR ninja install

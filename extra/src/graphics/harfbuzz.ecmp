@@ -14,7 +14,7 @@ The HarfBuzz package contains an OpenType text shaping engine.
 [files]
 harfbuzz-9.0.0.tar.xz https://github.com/harfbuzz/harfbuzz/releases/download/9.0.0/harfbuzz-9.0.0.tar.xz a41b272ceeb920c57263ec851604542d9ec85ee3030506d94662067c7b6ab89e
 
-[download]
+[prepare]
 tar -xf harfbuzz-9.0.0.tar.xz
 
 [install]
@@ -25,7 +25,7 @@ meson setup ..             \
       --prefix=/usr        \
       --buildtype=release  &&
 ninja
-DESTDIR=$BUILD_ROOT ninja install
+DESTDIR=$SOVIET_BUILD_DIR ninja install
 
 [special]
 # These have to be rebuilt after harfbuzz is installed

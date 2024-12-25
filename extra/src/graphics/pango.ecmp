@@ -19,7 +19,7 @@ It can be used anywhere that text layout is needed, though most of the work on P
 [files]
 pango-1.54.0.tar.xz https://download.gnome.org/sources/pango/1.54/pango-1.54.0.tar.xz 8a9eed75021ee734d7fc0fdf3a65c3bba51dfefe4ae51a9b414a60c70b2d1ed8
 
-[download]
+[prepare]
 tar -xf pango-1.54.0.tar.xz
 
 [install]
@@ -31,4 +31,4 @@ meson setup --prefix=/usr          \
             --wrap-mode=nofallback \
             ..                     &&
 ninja
-DESTDIR=$BUILD_ROOT ninja install
+DESTDIR=$SOVIET_BUILD_DIR ninja install

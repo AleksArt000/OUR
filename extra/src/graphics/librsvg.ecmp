@@ -21,7 +21,7 @@ freetype
 [files]
 librsvg-2.58.5.tar.xz https://download.gnome.org/sources/librsvg/2.58/librsvg-2.58.5.tar.xz 224233a0e347d38c415f15a49f0e0885313e3ecc18f3192055f9304dd2f3a27a
 
-[download]
+[prepare]
 tar -xf $NAME-$VERSION.tar.xz
 
 [install]
@@ -29,7 +29,7 @@ tar -xf $NAME-$VERSION.tar.xz
             --disable-static \
             --docdir=/usr/share/doc/$NAME-$VERSION
 make
-make DESTDIR=$BUILD_ROOT DOC_INSTALL_DIR='$(docdir)' install
+make DESTDIR=$SOVIET_BUILD_DIR DOC_INSTALL_DIR='$(docdir)' install
 
 [special]
 gdk-pixbuf-query-loaders --update-cache

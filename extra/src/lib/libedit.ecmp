@@ -9,10 +9,10 @@ url = https://thrysoee.dk/editline/
 [files]
 libedit-20240808-3.1.tar.gz https://thrysoee.dk/editline/libedit-20240808-3.1.tar.gz 5f0573349d77c4a48967191cdd6634dd7aa5f6398c6a57fe037cc02696d6099f
 
-[download]
+[prepare]
 tar -xzf libedit-20240808-3.1.tar.gz 
 
 [install]
 ./configure --prefix=/usr --disable-blacklist
 make
-make DESTDIR=$BUILD_ROOT install
+make DESTDIR=$SOVIET_BUILD_DIR install

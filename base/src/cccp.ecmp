@@ -13,7 +13,7 @@ libspm
 [files]
 $NAME-$VERSION.zip https://github.com/Soviet-Linux/CCCP/archive/$VERSION.zip 5caf52a5919e9a0fec54e878ff33324385cf84b89f3e603c2a7be22dc59a5a8a
 
-[download]
+[prepare]
 unzip $NAME-$VERSION.zip
 mv CCCP-$VERSION $NAME-$VERSION
 

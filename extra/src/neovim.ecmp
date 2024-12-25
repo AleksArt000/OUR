@@ -20,13 +20,13 @@ Vim-fork focused on extensibility and usability. A modal text editor.
 [optional]
 ninja
 
-[download]
+[prepare]
 tar -xzf $NAME-$VERSION.tar.gz
 
-[exports]
+[config]
 CMAKE_BUILD_TYPE=Release
 
 [install]
 make 
-make CMAKE_INSTALL_PREFIX=$BUILD_ROOT install
+make CMAKE_INSTALL_PREFIX=$SOVIET_BUILD_DIR install
 

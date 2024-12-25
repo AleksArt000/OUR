@@ -3,12 +3,12 @@ name = libunistring
 version = 1.2
 type = src
 url = https://ftp.gnu.org/gnu/$NAME/$NAME-$VERSION.tar.xz
-sha256 = 632bd65ed74a881ca8a0309a1001c428bd1cbd5cd7ddbf8cedcd2e65f4dcdc44
+ 
 
 [description]
 libunistring is a library that provides functions for manipulating Unicode string and for manipulating C strings according to the unicode standard.
 
-[download]
+[prepare]
 curl -L $URL --output $NAME-$VERSION.tar.xz
 tar -xf $NAME-$VERSION.tar.xz
 

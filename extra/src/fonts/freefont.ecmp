@@ -14,17 +14,17 @@ This set of fonts covers many non-CJK characters
 [dependencies]
 fontconfig
 
-[download]
+[prepare]
 mkdir freefont-20080323
 cd freefont-20080323
 unzip -j ../freefont-otf-20080323.zip
 tar -xzf ../freefont-ttf-20051206.tar.gz --strip-components=1
 
 [install]
-mkdir -p $BUILD_ROOT/usr/share/fonts/opentype/freefont
-mkdir -p $BUILD_ROOT/usr/share/fonts/truetype/freefont
-install -v -m644 *.otf $BUILD_ROOT/usr/share/fonts/opentype/freefont
-install -v -m644 *.ttf $BUILD_ROOT/usr/share/fonts/truetype/freefont
+mkdir -p $SOVIET_BUILD_DIR/usr/share/fonts/opentype/freefont
+mkdir -p $SOVIET_BUILD_DIR/usr/share/fonts/truetype/freefont
+install -v -m644 *.otf $SOVIET_BUILD_DIR/usr/share/fonts/opentype/freefont
+install -v -m644 *.ttf $SOVIET_BUILD_DIR/usr/share/fonts/truetype/freefont
 
 [special]
 fc-cache -v /usr/share/fonts/opentype/freefont

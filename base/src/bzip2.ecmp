@@ -3,12 +3,12 @@ name = bzip2
 version = 1.0.8
 type = src
 url = https://sourceware.org/pub/$NAME/$NAME-$VERSION.tar.gz
-sha256 = ab5a03176ee106d3f0fa90e381da478ddae405918153cca248e682cd0c4a2269
+ 
 
 [description]
 Programs for compressing and decompressing files
 
-[download]
+[prepare]
 curl -L $URL --output $NAME-$VERSION.tar.gz
 tar -xzf $NAME-$VERSION.tar.gz
 

@@ -13,7 +13,7 @@ The libdisplay-info package provides a set of high-level and low-level functions
 [files]
 libdisplay-info-0.2.0.tar.xz  https://gitlab.freedesktop.org/emersion/libdisplay-info/-/releases/0.2.0/downloads/libdisplay-info-0.2.0.tar.xz 5a2f002a16f42dd3540c8846f80a90b8f4bdcd067a94b9d2087bc2feae974176
 
-[download]
+[prepare]
 tar -xf libdisplay-info-0.2.0.tar.xz 
 
 [install]
@@ -22,4 +22,4 @@ cd    build &&
 
 meson setup --prefix=/usr --buildtype=release .. &&
 ninja
-DESTDIR=$BUILD_ROOT ninja install
+DESTDIR=$SOVIET_BUILD_DIR ninja install

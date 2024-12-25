@@ -13,7 +13,7 @@ The libclc package contains an implementation of the library requirements of the
 [files]
 libclc-18.1.7.src.tar.xz https://github.com/llvm/llvm-project/releases/download/llvmorg-18.1.7/libclc-18.1.7.src.tar.xz bf99fdabd64ebfc688775754edf4c6bd3ffc361906b710ee49107e03fd3db396
 
-[download]
+[prepare]
 tar -xf libclc-18.1.7.src.tar.xz
 
 [install]
@@ -24,4 +24,4 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr \
       -D CMAKE_BUILD_TYPE=Release  \
       -G Ninja ..                  &&
 ninja
-DESTDIR=$BUILD_ROOT ninja install
+DESTDIR=$SOVIET_BUILD_DIR ninja install

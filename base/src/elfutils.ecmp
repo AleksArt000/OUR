@@ -4,12 +4,12 @@ version = 0.191
 type = src
 license = GPL
 url = https://sourceware.org/ftp/$NAME/$VERSION/$NAME-$VERSION.tar.bz2
-sha256 = df76db71366d1d708365fc7a6c60ca48398f14367eb2b8954efc8897147ad871
+ 
 
 [description]
 elfutils is a collection of utilities and libraries to read, create and modify ELF binary files, find and handle DWARF debug data, symbols, thread state and stacktraces for processes and core files on GNU/Linux.
 
-[download]
+[prepare]
 curl -L $URL --output $NAME-$VERSION.tar.bz2
 tar -xf $NAME-$VERSION.tar.bz2
 

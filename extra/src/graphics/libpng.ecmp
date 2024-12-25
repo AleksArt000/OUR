@@ -12,7 +12,7 @@ The PNG format was designed as a replacement for GIF and, to a lesser extent, TI
 libpng-1.6.43.tar.xz https://downloads.sourceforge.net/libpng/libpng-1.6.43.tar.xz 6a5ca0652392a2d7c9db2ae5b40210843c0bbc081cbd410825ab00cc59f14a6c
 libpng-1.6.43-apng.patch.gz https://downloads.sourceforge.net/sourceforge/libpng-apng/libpng-1.6.43-apng.patch.gz d107579e90d55386d00e6086ea750942f22a04b9ab476bba0c660770cefafe22
 
-[download]
+[prepare]
 tar -xf libpng-1.6.43.tar.xz
 
 [install]
@@ -20,4 +20,4 @@ gzip -cd ../libpng-1.6.43-apng.patch.gz | patch -p1
 
 ./configure --prefix=/usr --disable-static &&
 make
-make DESTDIR=$BUILD_ROOT install
+make DESTDIR=$SOVIET_BUILD_DIR install

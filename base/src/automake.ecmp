@@ -5,13 +5,13 @@ version = 1.16
 type = src
 license = GPL-3.0-or-later
 url = https://ftp.gnu.org/gnu/$NAME/$NAME-$VERSION.tar.gz
-sha256 = 80da43bb5665596ee389e6d8b64b4f122ea4b92a685b1dbd813cd1f0e0c2d83f
+ 
 
 # package description
 [description]
 GNU Automake is a tool for automatically generating Makefile.in files compliant with the GNU Coding Standards
 
-[download]
+[prepare]
 curl -o $NAME-$VERSION.tar.gz $URL 
 tar -xf $NAME-$VERSION.tar.gz
 

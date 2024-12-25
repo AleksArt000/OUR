@@ -15,10 +15,10 @@ libxcb
 [files]
 xcb-util-renderutil-0.3.10.tar.xz https://xcb.freedesktop.org/dist/xcb-util-renderutil-0.3.10.tar.xz 3e15d4f0e22d8ddbfbb9f5d77db43eacd7a304029bf25a6166cc63caa96d04ba
 
-[download]
+[prepare]
 tar -xf $NAME-$VERSION.tar.xz
 
 [install]
 ./configure --prefix=/usr
 make
-make DESTDIR=$BUILD_ROOT install
+make DESTDIR=$SOVIET_BUILD_DIR install

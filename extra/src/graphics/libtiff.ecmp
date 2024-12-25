@@ -14,7 +14,7 @@ cmake
 [files]
 tiff-4.7.0.tar.xz https://download.osgeo.org/libtiff/tiff-4.7.0.tar.xz 273a0a73b1f0bed640afee4a5df0337357ced5b53d3d5d1c405b936501f71017
 
-[download]
+[prepare]
 tar -xf $NAME-$VERSION.tar.xz
 
 [install]
@@ -23,6 +23,6 @@ cd build &&
 cmake -D CMAKE_INSTALL_DOCDIR=/usr/share/doc/$NAME-$VERSION \
       -D CMAKE_INSTALL_PREFIX=/usr -G Ninja .. &&
 ninja
-DESTDIR=$BUILD_ROOT ninja -C build install
+DESTDIR=$SOVIET_BUILD_DIR ninja -C build install
 
 [special]

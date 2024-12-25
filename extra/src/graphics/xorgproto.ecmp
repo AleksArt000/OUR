@@ -24,7 +24,7 @@ and to allow other applications to build against the installed X Window system.
 [files]
 xorgproto-2024.1.tar.xz https://xorg.freedesktop.org/archive/individual/proto/xorgproto-2024.1.tar.xz 372225fd40815b8423547f5d890c5debc72e88b91088fbfb13158c20495ccb59
 
-[download]
+[prepare]
 tar -xf xorgproto-2024.1.tar.xz
 
 [install]
@@ -33,4 +33,4 @@ cd    build
 
 meson --prefix=$XORG_PREFIX -Dlegacy=true ..
 ninja
-DESTDIR=$BUILD_ROOT ninja install
+DESTDIR=$SOVIET_BUILD_DIR ninja install

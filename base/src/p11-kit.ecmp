@@ -4,12 +4,12 @@ version = 0.25.5
 type = src
 license = LGPL
 url = https://github.com/p11-glue/$NAME/releases/download/$VERSION/$NAME-$VERSION.tar.xz
-sha256 = 04d0a86450cdb1be018f26af6699857171a188ac6d5b8c90786a60854e1198e5
+ 
 
 [description]
 p11-kit is a library and utilities that provide a standard configuration and convenience functions for loading and enumerating PKCS#11 modules.
 
-[download]
+[prepare]
 curl -L $URL --output $NAME-$VERSION.tar.xz
 tar -xf $NAME-$VERSION.tar.xz
 

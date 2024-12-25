@@ -15,10 +15,10 @@ libcbor is a C library for parsing and generating CBOR, the general-purpose sche
 [dependencies]
 cmake
 
-[download]
+[prepare]
 tar -xzf $NAME-$VERSION.tar.gz
 
 [install]
 cmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release
 make
-make DESTDIR=$BUILD_ROOT install
+make DESTDIR=$SOVIET_BUILD_DIR install

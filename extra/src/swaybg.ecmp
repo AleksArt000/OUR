@@ -23,12 +23,12 @@ git
 [files]
 swaybg-1.2.1.tar.gz https://codeload.github.com/swaywm/swaybg/tar.gz/refs/tags/v1.2.1 45c4a1a3b83c86ddc321a6136402b708f195a022d0ccee4641b23d14c3a3c25e
 
-[download]
+[prepare]
 tar -xf $NAME-$VERSION.tar.gz
 
 [install]
 meson build --prefix /usr --buildtype=plain
 ninja -C build
-DESTDIR=$BUILD_ROOT ninja -C build install
+DESTDIR=$SOVIET_BUILD_DIR ninja -C build install
 
 [special]

@@ -47,7 +47,7 @@ libxkbfile-1.1.3.tar.xz https://www.x.org/pub/individual/lib/libxkbfile-1.1.3.ta
 libxshmfence-1.3.2.tar.xz https://www.x.org/pub/individual/lib/libxshmfence-1.3.2.tar.xz 870df257bc40b126d91b5a8f1da6ca8a524555268c50b59c0acd1a27f361606f
 libXpresent-1.0.1.tar.xz https://www.x.org/pub/individual/lib/libXpresent-1.0.1.tar.xz b964df9e5a066daa5e08d2dc82692c57ca27d00b8cc257e8e960c9f1cf26231b
 
-[download]
+[prepare]
 cat > list << "EOF"
 xtrans-1.5.0.tar.xz
 libX11-1.8.7.tar.xz
@@ -89,15 +89,15 @@ cp ./*.tar.xz xorg-libs-7/
 
 PKG_CONFIG_PATH=$PKG_CONFIG_PATH:$XORG_PREFIX/lib/pkgconfig   
 PKG_CONFIG_PATH=$PKG_CONFIG_PATH:$XORG_PREFIX/share/pkgconfig 
-PKG_CONFIG_PATH=$PKG_CONFIG_PATH:$BUILD_ROOT$XORG_PREFIX/lib/pkgconfig   
-PKG_CONFIG_PATH=$PKG_CONFIG_PATH:$BUILD_ROOT$XORG_PREFIX/share/pkgconfig
+PKG_CONFIG_PATH=$PKG_CONFIG_PATH:$SOVIET_BUILD_DIR$XORG_PREFIX/lib/pkgconfig   
+PKG_CONFIG_PATH=$PKG_CONFIG_PATH:$SOVIET_BUILD_DIR$XORG_PREFIX/share/pkgconfig
 
 LIBRARY_PATH=$LIBRARY_PATH:$XORG_PREFIX/lib
 C_INCLUDE_PATH=$C_INCLUDE_PATH:$XORG_PREFIX/include         
 CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:$XORG_PREFIX/include
-LIBRARY_PATH=$LIBRARY_PATH:$BUILD_ROOT$XORG_PREFIX/lib
-C_INCLUDE_PATH=$C_INCLUDE_PATH:$BUILD_ROOT$XORG_PREFIX/include         
-CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:$BUILD_ROOT$XORG_PREFIX/include
+LIBRARY_PATH=$LIBRARY_PATH:$SOVIET_BUILD_DIR$XORG_PREFIX/lib
+C_INCLUDE_PATH=$C_INCLUDE_PATH:$SOVIET_BUILD_DIR$XORG_PREFIX/include         
+CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:$SOVIET_BUILD_DIR$XORG_PREFIX/include
 
 for package in $(grep -v '^#' ../list | awk '{print $1}')
 do
@@ -131,7 +131,7 @@ do
       cd    build
         PKG_CONFIG_PATH=$PKG_CONFIG_PATH meson setup --prefix=$XORG_PREFIX --buildtype=release .. &&
         LIBRARY_PATH=$LIBRARY_PATH C_INCLUDE_PATH=$C_INCLUDE_PATH CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH LD_RUN_PATH=$LIBRARY_PATH ninja &&
-        DESTDIR=$BUILD_ROOT ninja install &&
+        DESTDIR=$SOVIET_BUILD_DIR ninja install &&
       popd     # $packagedir
       continue # for loop
     ;;
@@ -142,10 +142,10 @@ do
   esac
 
   LIBRARY_PATH=$LIBRARY_PATH C_INCLUDE_PATH=$C_INCLUDE_PATH CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH LD_RUN_PATH=$LIBRARY_PATH make &&
-  make DESTDIR=$BUILD_ROOT install &&
+  make DESTDIR=$SOVIET_BUILD_DIR install &&
   popd
   rm -rf $packagedir
-  libtool --finish $BUILD_ROOT/usr/lib
+  libtool --finish $SOVIET_BUILD_DIR/usr/lib
 done
 
 [special]

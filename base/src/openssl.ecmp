@@ -3,9 +3,9 @@ name = openssl
 version = 3.2.1
 type = src
 url = https://www.openssl.org/source/$NAME-$VERSION.tar.gz
-sha256 = 83c7329fe52c850677d75e5d0b0ca245309b97e8ecbcfdc1dfdc4ab9fac35b39
+ 
 
-[download]
+[prepare]
 curl -L $URL --output $NAME-$VERSION.tar.gz
 tar -xzf $NAME-$VERSION.tar.gz
 

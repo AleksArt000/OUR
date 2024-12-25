@@ -3,12 +3,12 @@ name = libassuan
 version = 3.0.1
 type = src
 url = https://www.gnupg.org/ftp/gcrypt/$NAME/$NAME-$VERSION.tar.bz2
-sha256 = c8f0f42e6103dea4b1a6a483cb556654e97302c7465308f58363778f95f194b1
+ 
 
 [description]
  The libassuan package contains an inter process communication library used by some of the other GnuPG related packages.
 
-[download]
+[prepare]
 curl -L $URL --output $NAME-$VERSION.tar.bz2
 tar -xf $NAME-$VERSION.tar.bz2
 

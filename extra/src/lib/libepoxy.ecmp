@@ -13,7 +13,7 @@ mesa
 [files]
 libepoxy-1.5.10.tar.xz https://download.gnome.org/sources/libepoxy/1.5/libepoxy-1.5.10.tar.xz 072cda4b59dd098bba8c2363a6247299db1fa89411dc221c8b81b8ee8192e623
 
-[download]
+[prepare]
 tar -xf libepoxy-1.5.10.tar.xz
 
 [install]
@@ -22,4 +22,4 @@ cd    build &&
 
 meson setup --prefix=/usr --buildtype=release .. &&
 ninja
-DESTDIR=$BUILD_ROOT ninja install
+DESTDIR=$SOVIET_BUILD_DIR ninja install

@@ -23,9 +23,9 @@ url = example.com
 
 environment = example_environment
 
-# Package exports
+# Package config
 
-[exports]
+[config]
 
 // These is how you create an environment
 // This file will be written to the default config dir as the name of the package
@@ -50,18 +50,6 @@ example-dependency-1
 [optional]
 example-dependency-2
 
-# Use this to ask the user something
-
-[inputs]
-
-    # be aware that the input might be Y or N since those
-    # can be passed by default form cccp so you should
-    # have sensible defaults in case that happens
-
-this is a question, users input will be stored in $INPUT_n
-this is a second question, users input will be stored in $INPUT_1
-this is a third question, users input will be stored in $INPUT_2
-
 # These are the files that need to be downloaded
 
 [files]
@@ -73,7 +61,7 @@ $NAME-$VERSION.tar.gz  https://example.com/$NAME-$VERSION.tar.gz bc968e5286...(s
 
 # A Script to extract the archive
 
-[download]
+[prepare]
 
     # The result should be a folder $NAME-$VERSION with the source
 
@@ -93,11 +81,11 @@ tar -xzf $NAME-$VERSION.tar.gz
 
 [install] 
 
-    # A package should be installed in the $BUILD_ROOT directory
+    # A package should be installed in the $SOVIET_BUILD_DIR directory
     # And make provided with $MAKE_FLAGS
     # That is usually achived by having:
 
-make DESTDIR=$BUILD_ROOT install
+make DESTDIR=$SOVIET_BUILD_DIR install
 
     # Notice that there is no need to use sudo as
     # packages are first installed to a temp dir

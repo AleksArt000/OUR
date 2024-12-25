@@ -4,13 +4,13 @@ version = 5.4.6
 type = src
 license = GPL, 0BSD
 url = https://github.com/tukaani-project/$NAME/releases/download/v$VERSION/$NAME-$VERSION.tar.xz
-sha256 = b92d4e3a438affcf13362a1305cd9d94ed47ddda22e456a42791e630a5644f5c
+ 
 
 [description]
 
 The Xz package contains programs for compressing and decompressing files. It provides capabilities for the lzma and the newer xz compression formats. Compressing text files with xz yields a better compression percentage than with the traditional gzip or bzip2 commands.
 
-[download]
+[prepare]
 curl -L $URL --output $NAME-$VERSION.tar.xz
 tar -xf $NAME-$VERSION.tar.xz
 

@@ -4,13 +4,13 @@ version = 256.5
 type = src
 license = GPLv3
 url = https://github.com/systemd/systemd/archive/v$VERSION/$NAME-$VERSION.tar.gz
-sha256 = 41bb91861ab9f2f2b6cadad558ea1f8764d701452b018852146d642a850c8a8b
+ 
 
 
 [description] 
 The systemd package contains programs for controlling the startup, running, and shutdown of the system. 
 
-[download]
+[prepare]
 curl -L $URL --output $NAME-$VERSION.tar.gz
 tar xf $NAME-$VERSION.tar.gz
 
