@@ -1,103 +1,5 @@
 # basic information about the package
-
-[info] 
-name = example
-version = 1.0.0
-
-    # If your are trying to make a package for a binary change this from "src" to "bin" an place it in the /bin dir
-
-type = src
-
-    # If you intend to make a bundle, that is:
-    # A package that has no file of it's own, and only used to group dependencies and execute scripts
-    # use the "con" type
-
-license = Example
-
-    # Here you put the url to the project
-
-url = example.com 
-
-    # The environment variable is like an additional config file that gets parsed along side the default one
-    # Useful if you are working on a complex project, and want to have a common set of variables
-
-environment = example_environment
-
-# Package config
-
-[config]
-
-// These is how you create an environment
-// This file will be written to the default config dir as the name of the package
-
-MY_EXAMPLE_PREFIX=/usr/example/
-
-// Notice the different style of comments, in order to not conflict with the comments of the package, and still be visible when the file is written
-// In order to access $MY_EXAMPLE_PREFIX in other packages, you would have to put ```environment = example``` in them.
-
-# package description
-
-[description] 
-Example package
-
-# Here you type any dependencies this program needes
-
-[dependencies]
-example-dependency-1
-
-# Here you type any optional dependencies this program might need
-
-[optional]
-example-dependency-2
-
-# These are the files that need to be downloaded
-
-[files]
-
-    # They are downloaded in the following format: name url sha256
-
-IMG_9524.png https://example.com/IMG_9524.png d181ac6256...(sha256)
-$NAME-$VERSION.tar.gz  https://example.com/$NAME-$VERSION.tar.gz bc968e5286...(sha256)
-
-# A Script to extract the archive
-
-[prepare]
-
-    # The result should be a folder $NAME-$VERSION with the source
-
-tar -xzf $NAME-$VERSION.tar.gz
-
-# this is a bash script to build the package
-
-[prepare]
-
-    # Usually just configuring and making the package is enough
-    # If something needs to be ran as root, it should be in the [install] section
-
-./configure --prefix=/usr
-make
-
-# this is basically a bash script to install the package
-
-[install] 
-
-    # A package should be installed in the $SOVIET_BUILD_DIR directory
-    # That is usually achived by having:
-
-make DESTDIR=$SOVIET_BUILD_DIR install
-
-    # Notice that there is no need to use sudo
-
-# this is a bash script that is run after the installation
-
-[special]
-
-    # If you want to run a command as root to do post-install work
-    # do it here
-
-echo "This is SPECIAL"
-
-# Also it should be noted that there are variables that are set before executing any of the scripts:
+# There are variables that are set before executing any of the scripts:
 #
 #   $NAME
 #   $VERSION
@@ -105,4 +7,70 @@ echo "This is SPECIAL"
 #   $URL
 #   $LICENSE
 # 
-# Which correspond to the package info in order to make updating easier.
+# Which correspond to the package info.
+[info]
+# Note: the name should match the file name of the package, so for "example.ecmp", the name is "example"
+name = example
+version = 1.0.0
+# If your are trying to make a package for a binary change this from "src" to "bin" an place it in the /bin dir
+# If you intend to make a bundle, that is:
+# A package that has no file of it's own, and is only used to group dependencies and execute scripts
+# use the "con" type
+type = src
+license = Example
+# Here you put the url to the project
+url = example.com 
+# The environment variable is like an additional config file that gets parsed along side the default one
+# Useful if you are working on a complex project, and want to have a common set of variables
+environment = example_environment
+
+# Package config
+[config]
+// These is how you create an environment
+// This file will be written to the default config dir as the name of the package
+MY_EXAMPLE_PREFIX=/usr/example/
+// Notice the different style of comments, in order to not conflict with the comments of the package, and still be visible when the file is written
+// In order to access $MY_EXAMPLE_PREFIX in other packages, you would have to put ```environment = example``` in them.
+
+# package description
+[description] 
+Example package
+
+# Here you type any dependencies this program needes
+[dependencies]
+example-dependency-1
+# Note: when dealing with circular dependencies (A->B->A), you might want to compile A without support for B,
+# and then add 'cccp -ri A' to B's [special] section.
+
+# Here you type any optional dependencies this program might need
+[optional]
+example-dependency-2
+
+# These are the files that need to be downloaded
+[files]
+# They are downloaded in the following format: name url sha256
+IMG_9524.png https://example.com/IMG_9524.png d181ac6256...(sha256)
+$NAME-$VERSION.tar.gz  https://example.com/$NAME-$VERSION.tar.gz bc968e5286...(sha256)
+
+# A Script to extract the and build the package
+[prepare]
+# The result should be a folder $NAME-$VERSION with the source
+tar -xzf $NAME-$VERSION.tar.gz
+cd $NAME-$VERSION
+# Usually just configuring and making the package is enough
+# If something needs to be ran as root, it should be in the [install] section
+./configure --prefix=/usr
+make
+
+# this is basically a bash script to install the package
+[install] 
+# A package should be installed in the $SOVIET_BUILD_DIR directory
+# That is usually achived by having:
+make DESTDIR=$SOVIET_BUILD_DIR install
+# Notice that there is no need to use sudo
+
+# this is a bash script that is run after the installation
+[special]
+# If you want to run a command as root to do post-install work
+# do it here:
+echo "This is SPECIAL"
